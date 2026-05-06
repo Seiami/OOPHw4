@@ -9,10 +9,26 @@ public class DeliveryRequest {
 	private int distanceLeagues;
 
 	public DeliveryRequest(PackageType packageType, int weight, int distance, RealmType destinationRealm, boolean isFragile) {
+		if (weight <= 0) {
+			throw new IllegalArgumentException("DeliveryRequest weight must be greater than zero.");
+		}
 		this.weightKg = weight;
+		
+		if (packageType == null) {
+			throw new NullPointerException("PackageType cannot be null!");
+		}
 		this.packageType = packageType;
+		
+		if (distance <= 0) {
+			throw new IllegalArgumentException("DeliveryRequest distance must be greater than zero.");
+		}
 		this.distanceLeagues = distance;
+		
+		if (destinationRealm == null) {
+			throw new NullPointerException("Destination Realm cannot be null!");
+		}
 		this.destinationRealm = destinationRealm;
+		
 		this.isFragile = isFragile;
 	}
 

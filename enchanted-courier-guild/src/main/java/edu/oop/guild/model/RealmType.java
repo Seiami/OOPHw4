@@ -4,7 +4,7 @@ public enum RealmType {
 	SKY,
 	UNDERGROUND;
 
-	Object displayName() {
+	public String displayName() {
 		switch(this) {
 	    	case SKY:
 	    		return new String("Sky Kingdom");

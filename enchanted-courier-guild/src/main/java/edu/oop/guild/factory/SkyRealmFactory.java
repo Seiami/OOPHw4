@@ -1,5 +1,5 @@
 package edu.oop.guild.factory;
 
-public class SkyRealmFactory {
+public class SkyRealmFactory implements RealmFactory {
 
 }

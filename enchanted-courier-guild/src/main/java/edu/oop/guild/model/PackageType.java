@@ -5,7 +5,7 @@ public enum PackageType {
 	POTION,
 	ARTIFACT;
 
-	Object label() {
+	public String label() {
 	switch(this) {
     	case FOOD:
     		return new String("Snack crate");

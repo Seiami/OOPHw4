@@ -9,27 +9,15 @@ public abstract class Creature {
 	protected int carryingCapacityKg;
 	protected RealmType nativeRealm;	
 	
-	public static String name(Creature c) {
-		return c.getName();
-	}
-	
-	protected String getName() {
+	public String name() {
 		return this.name;
 	}
 
-	public static int carryingCapacityKg(Creature c) {
-		return c.getCarryingCapacityKg();
-	}
-
-	protected int getCarryingCapacityKg() {
+	public int carryingCapacityKg() {
 		return this.carryingCapacityKg;
 	}
 
-	public static RealmType nativeRealm(Creature c) {
-		return c.getNativeRealm();
-	}
-	
-	protected RealmType getNativeRealm() {
+	public RealmType nativeRealm() {
 		return this.nativeRealm;
 	}
 

@@ -1,6 +1,5 @@
 package edu.oop.guild.creature;
 
-import edu.oop.guild.model.DeliveryRequest;
 import edu.oop.guild.model.RealmType;
 
 public class CloudDragon extends Creature {
