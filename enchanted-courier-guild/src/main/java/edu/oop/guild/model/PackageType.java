@@ -6,15 +6,12 @@ public enum PackageType {
 	ARTIFACT;
 
 	public String label() {
-	switch(this) {
-    	case FOOD:
+    	if (this == FOOD) {
     		return new String("Snack crate");
-    	case POTION:
+    	}
+    	else if (this == POTION) {
     		return new String("Potion case");
-    	case ARTIFACT:
-    		return new String("Ancient artifact");
-		default:
-			return null;
-	    }
+    	}
+    	return new String("Ancient artifact");
 	}
 }

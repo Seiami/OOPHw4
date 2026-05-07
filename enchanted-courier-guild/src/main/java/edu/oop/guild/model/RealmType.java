@@ -5,13 +5,9 @@ public enum RealmType {
 	UNDERGROUND;
 
 	public String displayName() {
-		switch(this) {
-	    	case SKY:
-	    		return new String("Sky Kingdom");
-	    	case UNDERGROUND:
-	    		return new String("Underground Market");
-			default:
-				return null;
-		    }
+		if (this == SKY) {
+			return new String("Sky Kingdom");
+		}
+		return new String("Underground Market");
 	}
 }
