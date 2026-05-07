@@ -11,10 +11,11 @@ public class StandardDeliveryStrategy implements DeliveryCostStrategy {
 			throw new NullPointerException("The delivery request is null!");
 		}
 		
-		if (request.isFragile()) {
-			return 26;
-		}
-		return 21;
+		Integer price = 17 + request.getDistanceLeagues();
+		
+		if (request.isFragile()) price += 5;
+		
+		return price;
 	}
 
 }
