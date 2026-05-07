@@ -1,25 +1,38 @@
 package edu.oop.guild.log;
 
+import java.util.ArrayList;
+
 public class GuildLog {
+	
+	private static GuildLog guildLog = null;
+	private ArrayList<String> entryLog = null;
+	
+	private GuildLog() {
+		entryLog = new ArrayList<>();
+	}
 
 	public static GuildLog getInstance() {
-		// TODO Auto-generated method stub
-		return null;
+		if(guildLog == null) {
+			guildLog = new GuildLog();
+		}
+		return guildLog;
 	}
 
 	public int size() {
-		// TODO Auto-generated method stub
-		return null;
+		return entryLog.size();
 	}
 
 	public void clear() {
-		// TODO Auto-generated method stub
-		
+		entryLog.clear();
+	}
+	
+	public void record(String s) {
+		if(s == null) throw new NullPointerException();
+		entryLog.add(s);
 	}
 
-	public Object entries() { //TODO Figure out what this returns!!
-		// TODO Auto-generated method stub
-		return null;
+	public ArrayList<String> entries() {
+		return entryLog;
 	}
 
 
