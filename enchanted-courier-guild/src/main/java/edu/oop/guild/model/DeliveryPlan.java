@@ -1,7 +1,7 @@
 package edu.oop.guild.model;
 
-import edu.oop.guild.creature.Creature;
 import java.util.Objects;
+import edu.oop.guild.creature.Creature;
 
 public class DeliveryPlan {
 	
@@ -39,9 +39,9 @@ public class DeliveryPlan {
 	public RealmType getRequestRealmType() {
 		return request.getDestinationRealm();
 	}
-
-	public String getCourier() {
-		return courier.name();
+	
+	public Creature getCourier() {
+		return courier;
 	}
 
 	public String getSealedLabel() {
