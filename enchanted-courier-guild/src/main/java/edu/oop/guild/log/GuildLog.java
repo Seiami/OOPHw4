@@ -1,6 +1,8 @@
 package edu.oop.guild.log;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class GuildLog {
 	
@@ -31,8 +33,9 @@ public class GuildLog {
 		entryLog.add(s);
 	}
 
-	public ArrayList<String> entries() {
-		return entryLog;
+	public List<String> entries() {
+		// gross icky yuck
+		return Collections.unmodifiableList(entryLog);
 	}
 
 
