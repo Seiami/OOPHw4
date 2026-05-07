@@ -18,10 +18,10 @@ public class CarefulDeliveryStrategy implements DeliveryCostStrategy {
 			if (request.getPackageType() == PackageType.POTION) {
 				return 33;
 			}
-			if (request.getPackageType() == PackageType.ARTIFACT) {
+//			if (request.getPackageType() == PackageType.ARTIFACT) {
 				return 45;
-			}
+//			}
 			
-			return null;
+//			return null;
 		}
 }
