@@ -1,5 +1,16 @@
 package edu.oop.guild.seal;
 
-public class GlowStoneSeal {
+public class GlowStoneSeal implements PackageSeal{
+
+	@Override
+	public String apply(String s) {
+		if(s == null) throw new NullPointerException();
+		return "◆ " + s + " ◆";
+	}
+
+	@Override
+	public int durability() {
+		return 12;
+	}
 
 }

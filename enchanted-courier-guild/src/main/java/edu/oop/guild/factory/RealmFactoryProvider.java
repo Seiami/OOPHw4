@@ -4,9 +4,16 @@ import edu.oop.guild.model.RealmType;
 
 public class RealmFactoryProvider {
 
-	public Object forRealm(RealmType realmType) {
-		// TODO Auto-generated method stub
-		return null;
+	public RealmFactory forRealm(RealmType realmType) {
+		switch(realmType) {
+			case SKY:
+				return new SkyRealmFactory();
+			case UNDERGROUND:
+				return new UndergroundRealmFactory();
+			default:
+				return null;
+			
+		}
 	}
 
 }
